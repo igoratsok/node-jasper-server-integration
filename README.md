@@ -7,12 +7,12 @@ Usage is quite simple:
 var JSIntegration = require('./JSIntegration.js');
 
 var jsIntegration = new  JSIntegration(
-  'http://localhost:8080/jasperserver', 
-  'reports/my_report_unit', 
-  'pdf', 
-  'jasperadmin', 
-  'jasperadmin', 
-  {"P_ID_ALUNO" :  1}
+  'http://localhost:8080/jasperserver', // URL of the Jasper Server
+  'reports/my_report_unit',             // Path to the Report
+  'pdf',                                // Export type
+  'jasperadmin',                        // User
+  'jasperadmin',                        // Password
+  {"P_ID_ALUNO" :  1}                   // Optional parameters
 );
 
 var data = jsIntegration.execute()
