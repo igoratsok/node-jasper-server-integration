@@ -8,7 +8,7 @@ var JSIntegration = require('./JSIntegration.js');
 
 var jsIntegration = new  JSIntegration(
   'http://localhost:8080/jasperserver', // URL of the Jasper Server
-  'reports/my_report_unit',             // Path to the Report
+  'reports/my_report_unit',             // Path to the Report Unit
   'pdf',                                // Export type
   'jasperadmin',                        // User
   'jasperadmin',                        // Password
