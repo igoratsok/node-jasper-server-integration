@@ -1,5 +1,5 @@
 # JasperServer Integration
-JSIntegration is a node module that quickly integrates node.js to Jasper Server.
+JSIntegration is a node module that quickly integrates node.js to Jasper Server and retrieves the binary data of the exported report.
 
 # Usage
 Usage is quite simple:
