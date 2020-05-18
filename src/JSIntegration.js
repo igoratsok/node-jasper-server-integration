@@ -5,12 +5,14 @@ module.exports = class JSIntegration {
         this.type = type;
         this.user = user;
         this.password = password;
+        this.parameters = [];
 
-        if (typeof parameters === 'undefined') {
-            this.parameters = [];
-        } else {
-            this.parameters = parameters;
-        }
+        if (typeof parameters !== 'undefined') {
+            for (var key in parameters) {
+                this.parameters = [];
+                this.parameters.push({parameter : key, value : parameters[key]});
+            }
+        } 
         
 
         if (this.jasperUrl.indexOf('/') === this.jasperUrl.length-1) {
@@ -46,7 +48,7 @@ module.exports = class JSIntegration {
             };
 
             url += this.jasperUrl + '/rest_v2/reports/' + this.reportPath + '.' + this.type + this._getQueryString();
-
+            
             http.get(
                 url,
                 options,
